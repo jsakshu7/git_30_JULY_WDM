@@ -1,0 +1,728 @@
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch pallabi_b2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch mohan_b3
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch manu_b4
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git  branch
+* main
+  manu_b4
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch -d manu_4
+error: branch 'manu_4' not found
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch -d manu_b4
+Deleted branch manu_b4 (was ba89877).
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git checkout saba_b1
+Switched to branch 'saba_b1'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git branch
+  main
+  mohan_b3
+  pallabi_b2
+* saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git ls-tree --name-only -r saba_b1
+content.txt
+template.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git branch
+  main
+  mohan_b3
+  pallabi_b2
+* saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+   2.1 objective------- saba_b1
+   2.2 problem statement--------saba_b1
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git checkout main
+M       content.txt
+Switched to branch 'main'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+   2.1 objective------- saba_b1
+   2.2 problem statement--------saba_b1
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git checkout saba_b1
+M       content.txt
+Switched to branch 'saba_b1'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git status
+On branch saba_b1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   content.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git add content.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git commit -m "first commit by b1"
+[saba_b1 9d71127] first commit by b1
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git checkout pallabi_b2
+Switched to branch 'pallabi_b2'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git branch
+  main
+  mohan_b3
+* pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git checkout saba_b1
+Switched to branch 'saba_b1'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+   2.1 objective------- saba_b1
+   2.2 problem statement--------saba_b1
+   2.3 workflow-------updated by b1
+   2.4 implementation----updated by b1
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (saba_b1)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git push origin saba_b1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 402 bytes | 402.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'saba_b1' on GitHub by visiting:
+remote:      https://github.com/jsakshu/28_july_GIT_WDM_AS/pull/new/saba_b1
+remote:
+To https://github.com/jsakshu/28_july_GIT_WDM_AS.git
+ * [new branch]      saba_b1 -> saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+* main
+  mohan_b3
+  pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git checkout pallabi_b2
+Switched to branch 'pallabi_b2'
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git branch
+  main
+  mohan_b3
+* pallabi_b2
+  saba_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ cat content.txt
+Table of content
+
+1.abstract
+2.Introduction
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ cat design.txt
+line 1------editied by b2
+line 2 -----editied by b2
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git status
+On branch pallabi_b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        design.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git add design.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git commit -m "first commit by b2"
+[pallabi_b2 028445e] first commit by b2
+ 1 file changed, 2 insertions(+)
+ create mode 100644 design.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git log
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+:
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+
+commit 11f9880dfd893a45805ac1c3a3bf30935057a233
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+
+commit 11f9880dfd893a45805ac1c3a3bf30935057a233
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Tue Jul 29 07:27:44 2025 +0530
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+
+commit 11f9880dfd893a45805ac1c3a3bf30935057a233
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Tue Jul 29 07:27:44 2025 +0530
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+
+commit 11f9880dfd893a45805ac1c3a3bf30935057a233
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Tue Jul 29 07:27:44 2025 +0530
+
+    first commit--created a table
+:...skipping...
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+    Delete template.txt
+
+commit 62c8cc8c5f84110f4937a8b36120df27cad10e66
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:08:37 2025 +0530
+
+    Create template.txt
+
+commit 11f9880dfd893a45805ac1c3a3bf30935057a233
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Tue Jul 29 07:27:44 2025 +0530
+
+    first commit--created a table
+~
+~
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git add design.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git commit -m "second commit by b2"
+[pallabi_b2 5ab9654] second commit by b2
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ cat design.txt
+line 1------editied by b2
+line 2 -----editied by b2
+
+
+line 3---updated by b2--commit-2
+line 5---updated by b2--commit-2
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+commit 5ab96542583448c719fdb7fa96bdf27986c94c71 (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:32:53 2025 +0530
+
+    second commit by b2
+
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+commit ba898777ac140960b2bdd39e5cc2ee8f01387ded (origin/main, mohan_b3, main)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:35:05 2025 +0530
+
+    Create template.txt
+
+commit 7f71e1c7e6efd4de53a23ba39d35c8d3ba9cd90b
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Jul 29 08:30:24 2025 +0530
+
+commit 5ab96542583448c719fdb7fa96bdf27986c94c71 (HEAD -> pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:32:53 2025 +0530
+
+    second commit by b2
+
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (pallabi_b2)
+$ git checkout  028445e326e9d8dc14cbff77b98d9954ca333cde
+Note: switching to '028445e326e9d8dc14cbff77b98d9954ca333cde'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 028445e first commit by b2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((028445e...))
+$ cat design.txt
+line 1------editied by b2
+line 2 -----editied by b2
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((028445e...))
+$ git checkout 5ab96542583448c719fdb7fa96bdf27986c94c71
+Previous HEAD position was 028445e first commit by b2
+HEAD is now at 5ab9654 second commit by b2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((5ab9654...))
+$ cat design.txt
+line 1------editied by b2
+line 2 -----editied by b2
+
+
+line 3---updated by b2--commit-2
+line 5---updated by b2--commit-2
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((5ab9654...))
+$ git log -n 2 --online
+fatal: unrecognized argument: --online
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((5ab9654...))
+$ git log -n 2 --oneline
+5ab9654 (HEAD, pallabi_b2) second commit by b2
+028445e first commit by b2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((5ab9654...))
+$ git log -n 2 --pretty=format:"%H"
+5ab96542583448c719fdb7fa96bdf27986c94c71
+028445e326e9d8dc14cbff77b98d9954ca333cde
+
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 ((5ab9654...))
+$ git log design.txt
+commit 5ab96542583448c719fdb7fa96bdf27986c94c71 (HEAD, pallabi_b2)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:32:53 2025 +0530
+
+    second commit by b2
+
+commit 028445e326e9d8dc14cbff77b98d9954ca333cde
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Wed Jul 30 08:27:48 2025 +0530
+
+    first commit by b2
+
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commands_class note_day 3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git branch
+  aks_b4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ content.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git tag -a v1.2 -m "v1.2--after merge"
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git tag
+v1.0
+v1.2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git push origin main
+Enumerating objects: 27, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (23/23), 1.96 KiB | 182.00 KiB/s, done.
+Total 23 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/jsakshu/28_july_GIT_WDM_AS.git
+   ba89877..863c56a  main -> main
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git push origin --tags
+Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 292 bytes | 146.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jsakshu/28_july_GIT_WDM_AS.git
+ * [new tag]         v1.0 -> v1.0
+ * [new tag]         v1.2 -> v1.2
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$ git clone "https://github.com/jsakshu7/git_30_JULY_WDM.git"
+Cloning into 'git_30_JULY_WDM'...
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 36 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (36/36), 1.81 MiB | 2.33 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+
+Lenovo@Akshatha MINGW64 /f/c data/git_project_1 (main)
+$

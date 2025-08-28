@@ -1,0 +1,202 @@
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git status
+On branch neeraj_b1
+nothing to commit, working tree clean
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git branch
+  aks_b4
+  main
+  manjula_b3
+* neeraj_b1
+  pamela_b2
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git checkout neeraj_b1
+Already on 'neeraj_b1'
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git log content.txt
+commit 37eec1b70dd65d50f1648c9f8f9395ce65802499
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Mon Aug 25 22:18:38 2025 +0530
+
+    first commit and edited two line
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ ls
+content.txt  readme.txt  readme1.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git log readme.txt
+commit 1f82308fcf45efcf7d2798c0fdaf6820783ac867
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Aug 26 21:47:25 2025 +0530
+
+    pull the flles
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git log readme1.txt
+commit bb7af04a3ac156e146320a82c445151230451c69 (HEAD -> neeraj_b1, tag: v1.0, origin/main, pamela_b2, manjula_b3, main, aks_b4)
+Author: jsakshu <96901179+jsakshu@users.noreply.github.com>
+Date:   Tue Aug 26 21:51:03 2025 +0530
+
+    created newfile in github
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ mkdir docs_folder
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ echo "welcome to script.txt file under the folder docs_folder" docs_folder/script.txt
+welcome to script.txt file under the folder docs_folder docs_folder/script.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ echo "welcome to script.txt file under the folder docs_folder" > docs_folder/script.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ ^C
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git status
+On branch neeraj_b1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs_folder/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git add .
+warning: in the working copy of 'docs_folder/script.txt', LF will be replaced by CRLF the next time Git touches it
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git status
+On branch neeraj_b1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs_folder/script.txt
+
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git commit -m "first commit by b1"
+[neeraj_b1 27f6b04] first commit by b1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 docs_folder/script.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git log docs_folder/script.txt
+commit 27f6b04ff289243846cbfd17f29a739346dadafa (HEAD -> neeraj_b1)
+Author: jsakshu <jsakshuammi@gmail.com>
+Date:   Thu Aug 28 20:57:58 2025 +0530
+
+    first commit by b1
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git tag
+v1.0
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git tag -a v2.0 -m " created folder and file under b1"
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git tag
+v1.0
+v2.0
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ cat docs_folder/script.txt
+welcome to script.txt file under the folder docs_folder
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (neeraj_b1)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git branch
+  aks_b4
+* main
+  manjula_b3
+  neeraj_b1
+  pamela_b2
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ cat docs_folder/script.txt
+cat: docs_folder/script.txt: No such file or directory
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git merge neeraj_b1
+Updating bb7af04..27f6b04
+Fast-forward
+ docs_folder/script.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 docs_folder/script.txt
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ cat docs_folder/script.txt
+welcome to script.txt file under the folder docs_folder
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git tag -a v3.0 -m " merged b1 with main branch"
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git tag
+v1.0
+v2.0
+v3.0
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 440 bytes | 220.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jsakshu/25_AUG_GIT_WDE_AKS.git
+   bb7af04..27f6b04  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git push origin neeraj_b1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'neeraj_b1' on GitHub by visiting:
+remote:      https://github.com/jsakshu/25_AUG_GIT_WDE_AKS/pull/new/neeraj_b1
+remote:
+To https://github.com/jsakshu/25_AUG_GIT_WDE_AKS.git
+ * [new branch]      neeraj_b1 -> neeraj_b1
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git push --all origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jsakshu/25_AUG_GIT_WDE_AKS.git
+ * [new branch]      aks_b4 -> aks_b4
+ * [new branch]      manjula_b3 -> manjula_b3
+ * [new branch]      pamela_b2 -> pamela_b2
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git push origin --tags
+Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 236 bytes | 118.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/jsakshu/25_AUG_GIT_WDE_AKS.git
+ * [new tag]         v2.0 -> v2.0
+ * [new tag]         v3.0 -> v3.0
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$ git clone "https://github.com/jsakshu7/git_30_JULY_WDM.git"
+Cloning into 'git_30_JULY_WDM'...
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 39 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (39/39), 1.81 MiB | 1.77 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+
+Lenovo@Akshatha MINGW64 /f/c data/web_git_project (main)
+$
